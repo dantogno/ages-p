@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 2040331430}
   - component: {fileID: 2040331429}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: test player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040331423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 16, z: 56}
+  m_LocalPosition: {x: 40, y: 1, z: 56}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 2058956656}
@@ -482,26 +482,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 10
-  m_RunSpeed: 18
-  m_RunstepLenghten: 0.1
-  m_JumpSpeed: 14
-  m_StickToGroundForce: 0.12
-  m_GravityMultiplier: 0
+  m_WalkSpeed: 42
+  m_RunSpeed: 94
+  m_RunstepLenghten: 0.2
+  m_JumpSpeed: 42
+  m_StickToGroundForce: 0.2
+  m_GravityMultiplier: 3
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90
-    smooth: 0
-    smoothTime: 5
+    smooth: 1
+    smoothTime: 7
     lockCursor: 1
   m_UseFovKick: 0
   m_FovKick:
-    Camera: {fileID: 0}
+    Camera: {fileID: 2058956655}
     originalFov: 0
-    FOVIncrease: 3
+    FOVIncrease: 4
     TimeToIncrease: 1
     TimeToDecrease: 1
     IncreaseCurve:
@@ -510,7 +510,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_UseHeadBob: 0
+  m_UseHeadBob: 1
   m_HeadBob:
     HorizontalBobRange: 0.33
     VerticalBobRange: 0.33
