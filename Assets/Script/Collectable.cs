@@ -6,7 +6,6 @@ public class Collectable : MonoBehaviour
 {
     private AudioSource audioSource;
     private SphereCollider sphereCollider;
-    private BoxCollider2D boxCollider2D;
   
 
     private void Start()
@@ -15,7 +14,7 @@ public class Collectable : MonoBehaviour
         sphereCollider = GetComponent<SphereCollider>();
     }
 
-    private void OnTriggerEnter(SphereCollider collision)
+    private void OnTriggerEnter(SphereCollider collision) // if the player collides with object, the object is destroyed.
     {
         if (collision.gameObject.CompareTag("Player"))
         {
