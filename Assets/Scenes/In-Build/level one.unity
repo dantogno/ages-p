@@ -127,17 +127,17 @@ PrefabInstance:
     - target: {fileID: 3499010931903501185, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 798.81
+      value: 879.6
       objectReference: {fileID: 0}
     - target: {fileID: 3499010931903501185, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 502.88
+      value: 502.4
       objectReference: {fileID: 0}
     - target: {fileID: 3499010931903501185, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1043.07
+      value: 1041.5
       objectReference: {fileID: 0}
     - target: {fileID: 3499010931903501185, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
@@ -232,7 +232,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-193270
+  m_Name: pb_Mesh-1102
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -392,7 +392,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-193266
+  m_Name: pb_Mesh-1098
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -643,7 +643,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -651,7 +651,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.455
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -747,7 +747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-193268
+  m_Name: pb_Mesh-1100
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
