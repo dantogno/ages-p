@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 352b0f922dd6560468bf3150d1a93208
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ButtonLow2
+    100004: Coat_Low
+    100006: ColarLow
+    100008: EyebrowLow:Group9669
+    100010: HairLow
+    100012: Hands_Low
+    100014: LashLow:Group2107
+    100016: Leg_ShoeLow
+    100018: LowEye:Group17797
+    100020: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltBuckle
+    100022: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltLow
+    100024: NewBeltMerged_UMesh_PM3D_Cube3D2:Group1
+    100026: NewBeltMerged_UMesh_PM3D_Cube3D2:Group2
+    100028: NewBeltMerged_UMesh_PM3D_Cube3D2:Group3
+    100030: NewBeltMerged_UMesh_PM3D_Cube3D2:Group5
+    100032: NewBeltMerged_UMesh_PM3D_Cube3D2:polySurface1
+    100034: NewBeltMerged_UMesh_PM3D_Cube3D2Low:Group48194
+    100036: NewHeadLow
+    400000: //RootNode
+    400002: ButtonLow2
+    400004: Coat_Low
+    400006: ColarLow
+    400008: EyebrowLow:Group9669
+    400010: HairLow
+    400012: Hands_Low
+    400014: LashLow:Group2107
+    400016: Leg_ShoeLow
+    400018: LowEye:Group17797
+    400020: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltBuckle
+    400022: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltLow
+    400024: NewBeltMerged_UMesh_PM3D_Cube3D2:Group1
+    400026: NewBeltMerged_UMesh_PM3D_Cube3D2:Group2
+    400028: NewBeltMerged_UMesh_PM3D_Cube3D2:Group3
+    400030: NewBeltMerged_UMesh_PM3D_Cube3D2:Group5
+    400032: NewBeltMerged_UMesh_PM3D_Cube3D2:polySurface1
+    400034: NewBeltMerged_UMesh_PM3D_Cube3D2Low:Group48194
+    400036: NewHeadLow
+    2100000: initialShadingGroup
+    2300000: ButtonLow2
+    2300002: Coat_Low
+    2300004: ColarLow
+    2300006: EyebrowLow:Group9669
+    2300008: HairLow
+    2300010: Hands_Low
+    2300012: LashLow:Group2107
+    2300014: Leg_ShoeLow
+    2300016: LowEye:Group17797
+    2300018: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltBuckle
+    2300020: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltLow
+    2300022: NewBeltMerged_UMesh_PM3D_Cube3D2:Group1
+    2300024: NewBeltMerged_UMesh_PM3D_Cube3D2:Group2
+    2300026: NewBeltMerged_UMesh_PM3D_Cube3D2:Group3
+    2300028: NewBeltMerged_UMesh_PM3D_Cube3D2:Group5
+    2300030: NewBeltMerged_UMesh_PM3D_Cube3D2:polySurface1
+    2300032: NewBeltMerged_UMesh_PM3D_Cube3D2Low:Group48194
+    2300034: NewHeadLow
+    3300000: ButtonLow2
+    3300002: Coat_Low
+    3300004: ColarLow
+    3300006: EyebrowLow:Group9669
+    3300008: HairLow
+    3300010: Hands_Low
+    3300012: LashLow:Group2107
+    3300014: Leg_ShoeLow
+    3300016: LowEye:Group17797
+    3300018: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltBuckle
+    3300020: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltLow
+    3300022: NewBeltMerged_UMesh_PM3D_Cube3D2:Group1
+    3300024: NewBeltMerged_UMesh_PM3D_Cube3D2:Group2
+    3300026: NewBeltMerged_UMesh_PM3D_Cube3D2:Group3
+    3300028: NewBeltMerged_UMesh_PM3D_Cube3D2:Group5
+    3300030: NewBeltMerged_UMesh_PM3D_Cube3D2:polySurface1
+    3300032: NewBeltMerged_UMesh_PM3D_Cube3D2Low:Group48194
+    3300034: NewHeadLow
+    4300000: ButtonLow2
+    4300002: Coat_Low
+    4300004: ColarLow
+    4300006: EyebrowLow:Group9669
+    4300008: HairLow
+    4300010: Hands_Low
+    4300012: LashLow:Group2107
+    4300014: Leg_ShoeLow
+    4300016: LowEye:Group17797
+    4300018: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltBuckle
+    4300020: NewBeltMerged_UMesh_PM3D_Cube3D2:BeltLow
+    4300022: NewBeltMerged_UMesh_PM3D_Cube3D2:Group1
+    4300024: NewBeltMerged_UMesh_PM3D_Cube3D2:Group2
+    4300026: NewBeltMerged_UMesh_PM3D_Cube3D2:Group3
+    4300028: NewBeltMerged_UMesh_PM3D_Cube3D2:Group5
+    4300030: NewBeltMerged_UMesh_PM3D_Cube3D2:polySurface1
+    4300032: NewBeltMerged_UMesh_PM3D_Cube3D2Low:Group48194
+    4300034: NewHeadLow
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
