@@ -7,7 +7,9 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     [SerializeField] private string displayText = nameof(InteractiveObject);
     private AudioSource audioSource;
 
-    public string DisplayText => displayText;
+    public string DisplayText => displayText = nameof(InteractiveObject);
+
+
     
      private void Awake()
     {

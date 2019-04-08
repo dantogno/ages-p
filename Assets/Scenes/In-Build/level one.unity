@@ -11422,11 +11422,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
-    - target: {fileID: 5106185680757493782, guid: 82e129261dc70d24286c2af4d5cb05c0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5106185680757493785, guid: 82e129261dc70d24286c2af4d5cb05c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11480,10 +11475,6 @@ PrefabInstance:
     - target: {fileID: 5106185680757493785, guid: 82e129261dc70d24286c2af4d5cb05c0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2011036940, guid: 82e129261dc70d24286c2af4d5cb05c0, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25332,106 +25323,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256776408, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776407, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776407, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776407, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.ForwardSpeed
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.BackwardSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.StrafeSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.JumpForce
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.RunMultiplier
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: advancedSettings.airControl
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].time
-      value: 133.66159
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].value
-      value: 0.038208008
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].value
-      value: 0.9930496
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[2].value
-      value: -0.070739746
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].time
-      value: -190.10294
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].outWeight
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
