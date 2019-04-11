@@ -18,14 +18,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float FlyMultiplier = 2.0f;   // Speed when flying
 	        public KeyCode RunKey = KeyCode.LeftShift;
             public KeyCode FlyKey;
+            public KeyCode FlyUp;
+            public KeyCode FlyDown;
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
 #if !MOBILE_INPUT
             private bool m_Running;
-#endif
-#if !MOBILE_INPUT
             private bool m_Flying;
 #endif
             public void UpdateDesiredTargetSpeed(Vector2 input)
@@ -57,12 +57,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	            {
 		            m_Running = false;
 	            }
-#endif
-#if !MOBILE_INPUT
                 if (Input.GetKey(FlyKey))
                 {
                     CurrentTargetSpeed *= FlyMultiplier;
                     m_Flying = true;
+                }
+                if (Input.GetKey(FlyUp) && Rigidbody && m_Flying = true)
+                {
+                    transform.position += transform.up * CurrentTargetSpeed *= FlyMultiplier;
+                    Rigidbody.useGravity = false;
+                    
                 }
                 else
                 {
@@ -77,14 +81,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 get { return m_Running; }
             }
 
-            public bool Flying { get; internal set; }
+            public bool Flying
+            {
+                get { return m_Flying; }
+            }
 #endif
-            //#if !MOBILE_INPUT
-            // public bool Flying;
-            //            {
-            //                get { return m_Flying; }
-            //            }
-            //#endif
+
         }
 
 
@@ -95,6 +97,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float stickToGroundHelperDistance = 0.5f; // stops the character
             public float slowDownRate = 20f; // rate at which the controller comes to a stop when there is no input
             public bool airControl; // can the user control the direction that is being moved in the air
+            public bool canSprint;
+            public bool canFly;
             [Tooltip("set it to 0.1 or more if you get stuck in wall")]
             public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
         }
@@ -111,7 +115,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-        private bool canFly;
 
         public Vector3 Velocity
         {
@@ -142,14 +145,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool Flying
         {
             get
-            {
-
-                return movementSettings.Flying;
-               
-
-            }
+           {
+#if !MOBILE_INPUT
+               return movementSettings.Flying;
+#else
+	            return false;
+#endif
+           }
         }
-
 
 
         private void Start()
@@ -295,5 +298,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
             }
         }
+        //private void Fly()
+        //{
+
+        //}
     }
 }
