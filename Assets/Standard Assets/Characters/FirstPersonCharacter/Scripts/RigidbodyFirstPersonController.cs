@@ -15,7 +15,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
+            public float FlyMultiplier = 2.0f;   // Speed when flying
 	        public KeyCode RunKey = KeyCode.LeftShift;
+            public KeyCode FlyKey;
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
@@ -23,7 +25,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             private bool m_Running;
 #endif
-
+#if !MOBILE_INPUT
+            private bool m_Flying;
+#endif
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
 	            if (input == Vector2.zero) return;
@@ -54,6 +58,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		            m_Running = false;
 	            }
 #endif
+#if !MOBILE_INPUT
+                if (Input.GetKey(FlyKey))
+                {
+                    CurrentTargetSpeed *= FlyMultiplier;
+                    m_Flying = true;
+                }
+                else
+                {
+                    m_Flying = false;
+                }
+#endif
             }
 
 #if !MOBILE_INPUT
@@ -61,7 +76,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 get { return m_Running; }
             }
+
+            public bool Flying { get; internal set; }
 #endif
+            //#if !MOBILE_INPUT
+            // public bool Flying;
+            //            {
+            //                get { return m_Flying; }
+            //            }
+            //#endif
         }
 
 
@@ -88,7 +111,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-
+        private bool canFly;
 
         public Vector3 Velocity
         {
@@ -116,6 +139,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
             }
         }
+        public bool Flying
+        {
+            get
+            {
+
+                return movementSettings.Flying;
+               
+
+            }
+        }
+
 
 
         private void Start()
@@ -240,7 +274,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
+        // sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()
         {
             m_PreviouslyGrounded = m_IsGrounded;
