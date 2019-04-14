@@ -8,6 +8,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        [SerializeField] private Transform rigidBody;
         [Serializable]
         public class MovementSettings
         {
@@ -16,10 +17,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
             public float FlyMultiplier = 2.0f;   // Speed when flying
-	        public KeyCode RunKey = KeyCode.LeftShift;
-            public KeyCode FlyKey;
-            public KeyCode FlyUp;
-            public KeyCode FlyDown;
+
+            public KeyCode RunKey = KeyCode.LeftShift;
+            public KeyCode FlyKey = KeyCode.Mouse1;
+            public KeyCode FlyUp = KeyCode.Q;
+            public KeyCode FlyDown = KeyCode.E;
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
@@ -27,6 +29,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             private bool m_Running;
             private bool m_Flying;
+            private float rigidBody;
+
 #endif
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
@@ -62,12 +66,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     CurrentTargetSpeed *= FlyMultiplier;
                     m_Flying = true;
                 }
-                if (Input.GetKey(FlyUp) && Rigidbody && m_Flying = true)
-                {
-                    transform.position += transform.up * CurrentTargetSpeed *= FlyMultiplier;
-                    Rigidbody.useGravity = false;
+                //if (Input.GetKey(FlyUp) && Rigidbody && m_Flying = true)
+                //{
+                //    transform.position += transform.up * CurrentTargetSpeed *= FlyMultiplier;
+                //    Rigidbody.useGravity = false;
                     
-                }
+                    
+                //}
                 else
                 {
                     m_Flying = false;
@@ -85,6 +90,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 get { return m_Flying; }
             }
+
+            public float RigidBody { get => rigidBody; set => rigidBody = value; }
 #endif
 
         }

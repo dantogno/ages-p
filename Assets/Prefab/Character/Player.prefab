@@ -79,11 +79,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 627296776}
   movementSettings:
-    ForwardSpeed: 21
+    ForwardSpeed: 10
     BackwardSpeed: 12
     StrafeSpeed: 12
-    RunMultiplier: 1.8
+    RunMultiplier: 1.7
+    FlyMultiplier: 2
     RunKey: 304
+    FlyKey: 324
     JumpForce: 80
     SlopeCurveModifier:
       serializedVersion: 2
