@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class InteractiveObject : MonoBehaviour, IInteractive
 {
-    [SerializeField] private string displayText = nameof(InteractiveObject);
+    [SerializeField]
+    private string displayText = nameof(InteractiveObject);
+
+    public string DisplayText => displayText;
     private AudioSource audioSource;
 
-    public string DisplayText => displayText = nameof(InteractiveObject);
+    
 
 
     
