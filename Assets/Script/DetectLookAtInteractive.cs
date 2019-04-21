@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class DetectLookAtInteractive : MonoBehaviour
 {
-    [Tooltip("Starting point of raycast used to detect origins.")]
+    [Tooltip("Starting point of raycast used to detect interactives.")]
     [SerializeField] private Transform raycastOrigin;
 
-    [Tooltip("How far from raycastOrigin we will search for interactive element.")]
+    [Tooltip("How far from the recastOrigin we will search for interactive elements.")]
     [SerializeField] private float maxRange = 5.0f;
 
-    // Event raised when the player looks at different IInteractive.
+    /// <summary>
+    /// Event raised when the player looks at a different IInteractive
+    /// </summary>
     public static event Action<IInteractive> LookedAtInteractiveChanged;
-
 
     public IInteractive LookedAtInteractive
     {
@@ -28,15 +29,19 @@ public class DetectLookAtInteractive : MonoBehaviour
             }
         }
     }
+
     private IInteractive lookedAtInteractive;
 
-    private void FixedUpdate()
-    {
-        IInteractive interactive = GetLookedAtInteractive();
 
-  
+    public void FixedUpdate()
+    {
+        LookedAtInteractive = GetLookedAtInteractive();
     }
 
+    /// <summary>
+    /// Raycast forward from the camera to look for IInteractives.
+    /// </summary>
+    /// <returns>The first IInteractive detected, or null if none are found.</returns>
     private IInteractive GetLookedAtInteractive()
     {
         Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * maxRange, Color.red);
@@ -49,13 +54,12 @@ public class DetectLookAtInteractive : MonoBehaviour
 
         if (objectWasDetected)
         {
-            // Debug.Log($"Player is looking at:  { hitInfo.collider.gameObject.name}");
+            // Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
             interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
         }
 
-        if (interactive != null)
-            //interactive.InteractWith();
-            lookedAtInteractive = interactive;
+
+
         return interactive;
     }
 }
