@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 256776406}
   - component: {fileID: 256776405}
   - component: {fileID: 4893492}
+  - component: {fileID: 6462949628111119790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -43,7 +44,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256776404}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 12
   m_Drag: 0
   m_AngularDrag: 0.4
   m_UseGravity: 1
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidBody: {fileID: 0}
   cam: {fileID: 627296776}
   movementSettings:
     ForwardSpeed: 10
@@ -86,6 +88,8 @@ MonoBehaviour:
     FlyMultiplier: 2
     RunKey: 304
     FlyKey: 324
+    FlyUp: 113
+    FlyDown: 101
     JumpForce: 80
     SlopeCurveModifier:
       serializedVersion: 2
@@ -126,6 +130,8 @@ MonoBehaviour:
     stickToGroundHelperDistance: 0.6
     slowDownRate: 20
     airControl: 1
+    canSprint: 0
+    canFly: 0
     shellOffset: 0
 --- !u!114 &4893492
 MonoBehaviour:
@@ -140,7 +146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastOrigin: {fileID: 627296780}
-  maxRange: 5
+  maxRange: 4
+--- !u!114 &6462949628111119790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256776404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fec57afc1ae161458b899b58f63d0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &627296775
 GameObject:
   m_ObjectHideFlags: 0
