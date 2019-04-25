@@ -17,7 +17,7 @@ public class InventoryMenu : MonoBehaviour
     [SerializeField]
     private Text itemLabelText;
 
-    [Tooltip("Place in the UI for displaying ifo about the name of the selected inventory item.")]
+    [Tooltip("Place in the UI for displaying info about the name of the selected inventory item.")]
     [SerializeField]
     private Text descriptionAreaText;
 
