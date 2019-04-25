@@ -8,6 +8,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        [SerializeField] private Transform rigidBody;
         [Serializable]
         public class MovementSettings
         {
@@ -15,15 +16,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
-	        public KeyCode RunKey = KeyCode.LeftShift;
+            public float FlyMultiplier = 2.0f;   // Speed when flying
+
+            public KeyCode RunKey = KeyCode.LeftShift;
+            public KeyCode FlyKey = KeyCode.Mouse1;
+            public KeyCode FlyUp = KeyCode.Q;
+            public KeyCode FlyDown = KeyCode.E;
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
 #if !MOBILE_INPUT
             private bool m_Running;
-#endif
+            private bool m_Flying;
+            private float rigidBody;
 
+#endif
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
 	            if (input == Vector2.zero) return;
@@ -53,6 +61,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	            {
 		            m_Running = false;
 	            }
+                if (Input.GetKey(FlyKey))
+                {
+                    CurrentTargetSpeed *= FlyMultiplier;
+                    m_Flying = true;
+                }
+                //if (Input.GetKey(FlyUp) && Rigidbody && m_Flying = true)
+                //{
+                //    transform.position += transform.up * CurrentTargetSpeed *= FlyMultiplier;
+                //    Rigidbody.useGravity = false;
+                    
+                    
+                //}
+                else
+                {
+                    m_Flying = false;
+                }
 #endif
             }
 
@@ -61,7 +85,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 get { return m_Running; }
             }
+
+            public bool Flying
+            {
+                get { return m_Flying; }
+            }
+
+            public float RigidBody { get => rigidBody; set => rigidBody = value; }
 #endif
+
         }
 
 
@@ -72,6 +104,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float stickToGroundHelperDistance = 0.5f; // stops the character
             public float slowDownRate = 20f; // rate at which the controller comes to a stop when there is no input
             public bool airControl; // can the user control the direction that is being moved in the air
+            public bool canSprint;
+            public bool canFly;
             [Tooltip("set it to 0.1 or more if you get stuck in wall")]
             public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
         }
@@ -88,7 +122,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-
 
         public Vector3 Velocity
         {
@@ -115,6 +148,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	            return false;
 #endif
             }
+        }
+        public bool Flying
+        {
+            get
+           {
+#if !MOBILE_INPUT
+               return movementSettings.Flying;
+#else
+	            return false;
+#endif
+           }
         }
 
 
@@ -240,7 +284,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
+        // sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()
         {
             m_PreviouslyGrounded = m_IsGrounded;
@@ -261,5 +305,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
             }
         }
+        //private void Fly()
+        //{
+
+        //}
     }
 }

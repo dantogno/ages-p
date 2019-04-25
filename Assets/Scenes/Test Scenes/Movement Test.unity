@@ -181,6 +181,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &905218566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 256776408, guid: 0b3285002722d7045a6cc5162196140a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1261067719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1261067719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,8 +243,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 256776405, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
-      propertyPath: movementSettings.ForwardSpeed
-      value: 10
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 905218566}
+    - target: {fileID: 256776407, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3285002722d7045a6cc5162196140a, type: 3}
