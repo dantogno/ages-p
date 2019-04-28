@@ -921,11 +921,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3499010931903501186, guid: 809382e2a12c3424fb29bd65ca91aa48,
+    - target: {fileID: 3499010930853107039, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
-      propertyPath: m_Name
-      value: Monument
-      objectReference: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 537137689}
+    - target: {fileID: 3499010930853107043, guid: 809382e2a12c3424fb29bd65ca91aa48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 537137689}
+    - target: {fileID: 3499010930964118666, guid: 809382e2a12c3424fb29bd65ca91aa48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2048392877}
+    - target: {fileID: 3499010930964118670, guid: 809382e2a12c3424fb29bd65ca91aa48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2048392877}
+    - target: {fileID: 3499010931794351578, guid: 809382e2a12c3424fb29bd65ca91aa48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 331188529}
+    - target: {fileID: 3499010931794351582, guid: 809382e2a12c3424fb29bd65ca91aa48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 331188529}
     - target: {fileID: 3499010931903501185, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -996,36 +1021,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.9957569
       objectReference: {fileID: 0}
-    - target: {fileID: 3499010930964118666, guid: 809382e2a12c3424fb29bd65ca91aa48,
+    - target: {fileID: 3499010931903501186, guid: 809382e2a12c3424fb29bd65ca91aa48,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2048392877}
-    - target: {fileID: 3499010930964118670, guid: 809382e2a12c3424fb29bd65ca91aa48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2048392877}
-    - target: {fileID: 3499010931794351578, guid: 809382e2a12c3424fb29bd65ca91aa48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 331188529}
-    - target: {fileID: 3499010931794351582, guid: 809382e2a12c3424fb29bd65ca91aa48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 331188529}
-    - target: {fileID: 3499010930853107039, guid: 809382e2a12c3424fb29bd65ca91aa48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 537137689}
-    - target: {fileID: 3499010930853107043, guid: 809382e2a12c3424fb29bd65ca91aa48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 537137689}
+      propertyPath: m_Name
+      value: Monument
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 809382e2a12c3424fb29bd65ca91aa48, type: 3}
 --- !u!4 &48880092 stripped
@@ -7076,6 +7076,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2522dcf0fb8d6b4aa4ddd10c405746a, type: 3}
+--- !u!114 &485840728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4208836444485827128, guid: 1da62b0326b24e445bceac3650b3b785,
+    type: 3}
+  m_PrefabInstance: {fileID: 1846021419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &492673181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 488264, guid: 3b0351c8c6424ba4484c08a7df107bb1,
@@ -25314,6 +25326,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1399472011}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1814586688 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4208836444431112494, guid: 1da62b0326b24e445bceac3650b3b785,
+    type: 3}
+  m_PrefabInstance: {fileID: 1846021419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1816176317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25967,7 +25985,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventoryListContentArea
       value: 
-      objectReference: {fileID: 2110691592}
+      objectReference: {fileID: 1814586688}
     - target: {fileID: 4208836443184621183, guid: 1da62b0326b24e445bceac3650b3b785,
         type: 3}
       propertyPath: itemLabelText
@@ -25978,6 +25996,11 @@ PrefabInstance:
       propertyPath: inventoryMenuItemTogglePrefab
       value: 
       objectReference: {fileID: 2110691591}
+    - target: {fileID: 4208836443184621183, guid: 1da62b0326b24e445bceac3650b3b785,
+        type: 3}
+      propertyPath: descriptionAreaText
+      value: 
+      objectReference: {fileID: 485840728}
     - target: {fileID: 4208836443184621176, guid: 1da62b0326b24e445bceac3650b3b785,
         type: 3}
       propertyPath: m_Alpha
@@ -26757,6 +26780,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208836444367675920, guid: 1da62b0326b24e445bceac3650b3b785,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208836444367675920, guid: 1da62b0326b24e445bceac3650b3b785,
+        type: 3}
+      propertyPath: m_Name
+      value: Description Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1da62b0326b24e445bceac3650b3b785, type: 3}
@@ -30004,12 +30037,6 @@ PrefabInstance:
 --- !u!1 &2110691591 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4208836443715773193, guid: 1da62b0326b24e445bceac3650b3b785,
-    type: 3}
-  m_PrefabInstance: {fileID: 1846021419}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &2110691592 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4208836443715773192, guid: 1da62b0326b24e445bceac3650b3b785,
     type: 3}
   m_PrefabInstance: {fileID: 1846021419}
   m_PrefabAsset: {fileID: 0}
