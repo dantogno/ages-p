@@ -441,7 +441,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4208836443184621125}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -455,8 +455,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 2d72cd83cfe855c4a94142da3a91c202, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1499,7 +1499,6 @@ GameObject:
   - component: {fileID: 4208836444639507081}
   - component: {fileID: 4208836444639507082}
   - component: {fileID: 4208836444639507083}
-  - component: {fileID: 4434107700946576742}
   - component: {fileID: 103635053}
   m_Layer: 5
   m_Name: Exit Button
@@ -1605,7 +1604,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4434107700946576742}
+      - m_Target: {fileID: 4208836443184621183}
         m_MethodName: ExitMenuButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -1618,22 +1617,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &4434107700946576742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208836444639507093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f2f4741fd01f44dbda85192d2fb435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryMenuItemTogglePrefab: {fileID: 0}
-  inventoryListContentArea: {fileID: 0}
-  itemLabelText: {fileID: 0}
-  descriptionAreaText: {fileID: 0}
 --- !u!225 &103635053
 CanvasGroup:
   m_ObjectHideFlags: 0
