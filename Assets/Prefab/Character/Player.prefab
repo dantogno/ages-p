@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 256776405}
   - component: {fileID: 4893492}
   - component: {fileID: 6462949628111119790}
+  - component: {fileID: 357770407}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -163,6 +164,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fec57afc1ae161458b899b58f63d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &357770407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256776404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd775373a3b4c3742921aadbd7a55955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 627296775}
+  worldMapCamera: {fileID: 5794879020152948915}
+  SwitchCameraView: 109
 --- !u!1 &627296775
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +588,7 @@ GameObject:
   - component: {fileID: 7605415468980375936}
   - component: {fileID: 1100749396422520714}
   m_Layer: 9
-  m_Name: ' Worldmap Camera'
+  m_Name: Worldmap Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
