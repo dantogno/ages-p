@@ -11,6 +11,7 @@ public class LookedAtInterativeDisplayText : MonoBehaviour
 {
     private IInteractive lookedAtInteractive;
     private Text displayText;
+    private object DetectLookedAtInteractive;
 
     private void Awake()
     {
@@ -42,14 +43,14 @@ public class LookedAtInterativeDisplayText : MonoBehaviour
     }
 
     #region Event subscription / unsubscription 
-    //private void OnEnable()
-    //{
-    //    DetectLookedAtInteractive.LookedAtInteractiveChanged += OnLookedAtInteractiveChanged;
-    //}
+    private void OnEnable()
+    {
+       DetectLookAtInteractive.LookedAtInteractiveChanged += OnLookedAtInteractiveChanged;
+    }
 
-    //private void OnDisable()
-    //{
-    //    DetectLookedAtInteractive.LookedAtInteractiveChanged -= OnLookedAtInteractiveChanged;
-    //}
+    private void OnDisable()
+    {
+        DetectLookAtInteractive.LookedAtInteractiveChanged -= OnLookedAtInteractiveChanged;
+    }
     #endregion
 }
